@@ -31,4 +31,25 @@ protected:
 	afx_msg void OnPaint();
 	afx_msg HCURSOR OnQueryDragIcon();
 	DECLARE_MESSAGE_MAP()
+public:
+
+
+	//Show the message
+	void ShowMessageString(CString Message, int color);
+
+	//CString convert to BYTE
+	void CstringToByte(CString sInput, BYTE bOutput[]);
+
+	//Ascii convert to Hex
+	BOOL AsciiToHex(BYTE pAsciiArray[], BYTE pHexArray[], int Len);
+
+
+
+
+	afx_msg void OnBnClickedButtonSend();
+	afx_msg void OnBnClickedButtonSearch();
+	CComboBox m_cb_drive;
+	CRichEditCtrl m_re_receivedata;
+	CEdit m_e_senddata;
+
 };
